@@ -52,7 +52,7 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <div className="font-bold text-lg" style={{ color: "#003366" }}>
-          Portofolio Amir Hamzah
+          Amir Hamzah
         </div>
 
         <ul className="hidden md:flex gap-8">
