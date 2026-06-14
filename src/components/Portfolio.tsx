@@ -1,7 +1,8 @@
 "use client";
 
 import { portfolioData } from "@/data/portfolio";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Monitor } from "lucide-react";
+import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Portfolio() {
@@ -28,19 +29,28 @@ export default function Portfolio() {
         {/* GRID CARD PORTOFOLIO */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolioData.map((item, index) => (
-            <ScrollReveal key={item.id} delay={index * 0.15}>
+            <ScrollReveal key={item.id} delay={index * 0.15} className="h-full">
               <div 
-                className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col h-full hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
               >
               
               {/* AREA THUMBNAIL */}
               <div 
-                className="relative overflow-hidden h-48 bg-gray-100"
+                className="relative overflow-hidden h-48 bg-gray-100 group"
                 style={{ background: "linear-gradient(135deg, #e6f3ff, #cce0ff)" }}
               >
-                <div className="w-full h-full flex items-center justify-center">
-                  <span className="text-4xl">🖥️</span>
-                </div>
+                {item.image ? (
+                  <Image 
+                    src={item.image} 
+                    alt={item.title} 
+                    fill 
+                    className="object-cover transition-transform duration-500 group-hover:scale-110" 
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center transition-transform duration-500 group-hover:scale-110">
+                    <Monitor size={40} style={{ color: "#003366", opacity: 0.4 }} />
+                  </div>
+                )}
                 <div 
                   className="absolute top-3 left-3 text-xs font-semibold px-2 py-1 rounded-full"
                   style={{ background: "#003366", color: "white" }}

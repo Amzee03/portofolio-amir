@@ -2,20 +2,26 @@
 
 import ScrollReveal from "@/components/ScrollReveal";
 
-const hardSkills = [
-  "HTML & CSS",
-  "Tailwind CSS",
-  "JavaScript",
-  "Figma",
-  "Adobe Illustrator",
-  "Flutter"
+import { Code2, Wind, Braces, Palette, PenTool, Layers, Wrench, Users, Atom, Triangle, Sparkles, Database } from "lucide-react";
+
+const hardSkillsData = [
+  { name: "React.js", icon: Atom, color: "#61DAFB" },
+  { name: "Next.js", icon: Triangle, color: "#000000" },
+  { name: "Framer Motion", icon: Sparkles, color: "#BB44F2" },
+  { name: "Zustand", icon: Database, color: "#443E38" },
+  { name: "HTML & CSS", icon: Code2, color: "#e44d26" },
+  { name: "Tailwind CSS", icon: Wind, color: "#06b6d4" },
+  { name: "JavaScript", icon: Braces, color: "#d4a500" },
+  { name: "Figma", icon: Palette, color: "#a259ff" },
+  { name: "Adobe Illustrator", icon: PenTool, color: "#ff7c00" },
+  { name: "Flutter", icon: Layers, color: "#0175c2" },
 ];
 
-const softSkills = [
+const softSkillsData = [
   "Komunikasi",
   "Kolaborasi Tim",
   "Manajemen Waktu",
-  "Problem Solving"
+  "Problem Solving",
 ];
 
 export default function Skills() {
@@ -45,17 +51,17 @@ export default function Skills() {
           {/* CARD HARD SKILLS */}
           <ScrollReveal delay={0.1} direction="left">
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-6 pb-4 border-b border-gray-100">
-                ⚙️ Hard Skills
+              <h3 className="text-xl font-bold text-gray-900 mb-6 pb-4 border-b border-gray-100 flex items-center gap-2">
+                <Wrench size={20} style={{ color: "#003366" }} />
+                Hard Skills
               </h3>
-              <div>
-                {hardSkills.map((skill, index) => (
-                  <div key={index} className="flex items-center gap-3 py-3 border-b border-gray-50 last:border-0">
-                    <div 
-                      className="w-2 h-2 rounded-full flex-shrink-0"
-                      style={{ background: "#003366" }}
-                    ></div>
-                    <span className="text-gray-700 font-medium">{skill}</span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6">
+                {hardSkillsData.map((item) => (
+                  <div key={item.name} className="flex items-center gap-3 py-3 border-b border-gray-50">
+                    <div className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "#f8fafc" }}>
+                      <item.icon size={16} style={{ color: item.color }} />
+                    </div>
+                    <span className="text-gray-700 font-medium truncate">{item.name}</span>
                   </div>
                 ))}
               </div>
@@ -65,11 +71,12 @@ export default function Skills() {
           {/* CARD SOFT SKILLS */}
           <ScrollReveal delay={0.2} direction="right">
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-900 mb-6 pb-4 border-b border-gray-100">
-                🤝 Soft Skills
+              <h3 className="text-xl font-bold text-gray-900 mb-6 pb-4 border-b border-gray-100 flex items-center gap-2">
+                <Users size={20} style={{ color: "#003366" }} />
+                Soft Skills
               </h3>
               <div>
-                {softSkills.map((skill, index) => (
+                {softSkillsData.map((skill, index) => (
                   <div key={index} className="flex items-center gap-3 py-3 border-b border-gray-50 last:border-0">
                     <div 
                       className="w-2 h-2 rounded-full flex-shrink-0"

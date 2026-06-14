@@ -49,7 +49,7 @@ export default function Experience() {
                 </div>
 
                 {/* KARTU KONTEN */}
-                <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex-1">
+                <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex-1">
                   
                   {/* HEADER KARTU */}
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-3">

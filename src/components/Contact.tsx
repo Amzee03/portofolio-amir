@@ -64,7 +64,7 @@ export default function Contact() {
                     href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col items-center text-center gap-4 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                  className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col items-center text-center gap-4 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 cursor-pointer"
                 >
                   <div 
                     className="w-16 h-16 rounded-2xl flex items-center justify-center"
@@ -91,7 +91,7 @@ export default function Contact() {
           <ScrollReveal delay={0.4}>
             <div className="flex justify-center">
               <a 
-                href="#"
+                href="/CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-10 py-4 rounded-full text-white font-semibold text-lg transition-all duration-300 hover:opacity-90 hover:shadow-xl hover:-translate-y-0.5"
@@ -108,12 +108,9 @@ export default function Contact() {
 
       {/* FOOTER */}
       <footer className="bg-white border-t border-gray-200 py-6">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-2">
-          <p className="text-gray-500 text-sm">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col items-center justify-center gap-2">
+          <p className="text-gray-500 text-sm text-center">
             © 2025 Portofolio Amir Hamzah. All rights reserved.
-          </p>
-          <p className="text-gray-400 text-sm">
-            Dibangun dengan Next.js & Tailwind CSS ❤️
           </p>
         </div>
       </footer>

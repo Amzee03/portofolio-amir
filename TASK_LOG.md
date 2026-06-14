@@ -23,8 +23,8 @@ Dokumen ini mencatat progress pembangunan ulang website portofolio dari HTML sta
 | 6 | **Section Portofolio & Pengalaman** | Grid card portofolio (3 kolom desktop), mapping dari `data/portfolio.ts`, layout Vertical Timeline untuk pengalaman kerja | ✅ Selesai |
 | 7 | **Section Kontak, Footer & Assembly** | 3 card kontak (Email, WhatsApp, LinkedIn), tombol CV, footer copyright, dan perakitan semua komponen di `page.tsx` | ✅ Selesai |
 | 8 | **Animasi (Framer Motion)** | Implementasi scroll reveal (fade-in & slide-up), hover lift effect pada semua card | ✅ Selesai |
-| 9 | **Dokumentasi & GitHub** | Inisialisasi repositori Git, commit seluruh kode, push ke GitHub sebagai dokumentasi proyek | 🔄 Sedang Dikerjakan |
-| 10 | **Build & Deploy** | Proses build produksi dan deployment ke Vercel agar dapat diakses publik | ⏳ Belum Dimulai |
+| 9 | **Dokumentasi & GitHub** | Inisialisasi repositori Git, commit seluruh kode, push ke GitHub sebagai dokumentasi proyek | ✅ Selesai |
+| 10 | **Build, Deploy & Custom Domain** | Build produksi, deploy ke Vercel, beli domain Hostinger, dan koneksi domain ke Vercel | 🔄 Sedang Dikerjakan |
 
 ---
 
@@ -83,10 +83,25 @@ Dokumen ini mencatat progress pembangunan ulang website portofolio dari HTML sta
 - Portfolio.tsx & Experience.tsx: ScrollReveal dengan stagger delay berbasis index pada setiap card dan item timeline.
 - Contact.tsx: ScrollReveal pada judul, setiap card kontak, dan tombol CV.
 
-### 🔄 Tahap 9 — Dokumentasi & GitHub
-- Commit final seluruh kode proyek sedang disiapkan.
-- Push ke repositori GitHub sebagai dokumentasi proyek.
+### ✅ Tahap 9 — Dokumentasi & GitHub
+- File dibuat: `README.md` dengan dokumentasi lengkap tech stack, struktur folder, dan fitur.
+- Verifikasi `.gitignore` untuk keamanan file environment.
+- Commit final dengan pesan konvensional (Conventional Commits).
+- Repositori berhasil di-push ke GitHub.
+
+### 🔄 Tahap 10 — Build, Deploy & Custom Domain
+- Fase 1: Build produksi lokal dan deploy ke Vercel.
+- Fase 2: Pembelian domain dari Hostinger.
+- Fase 3: Koneksi domain Hostinger ke Vercel.
+
+## 📝 Catatan Revisi
+
+### 🔄 Revisi Icon & Emoticon (setelah Tahap 8)
+- **Masalah:** Penggunaan emoji (🎨, 💻, ✏️, ⚙️, 🤝, 📄, 🖥️, 👋) tidak konsisten secara visual.
+- **Solusi:** Semua emoji/emoticon diganti dengan komponen Lucide React agar konsisten dalam 1 tema (warna navy #003366).
+- **Pengecualian:** Icon per item Hard Skills menggunakan warna brand asli masing-masing teknologi.
+- **File yang diubah:** `About.tsx`, `Skills.tsx`, `Portfolio.tsx`, `Contact.tsx`, `Hero.tsx`.
 
 ---
 
-*Terakhir diperbarui: Tahap 9*
+*Terakhir diperbarui: Tahap 10*

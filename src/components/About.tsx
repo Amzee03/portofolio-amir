@@ -1,6 +1,6 @@
 "use client";
 
-import { GraduationCap, Sparkles } from "lucide-react";
+import { GraduationCap, Sparkles, Palette, Code, Pen, FileText } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export default function About() {
@@ -14,8 +14,8 @@ export default function About() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Tentang Saya
             </h2>
-            <p className="text-gray-600 max-w-xl mx-auto">
-              Kenali lebih jauh latar belakang pendidikan dan keahlian yang saya miliki.
+            <p className="text-gray-600 text-md max-w-xl mx-auto text-justify">
+              Front-End Engineer yang berfokus pada pengembangan antarmuka web yang scalable dan integrasi user experience yang dinamis. Bersemangat dalam merancang arsitektur client-side yang efisien untuk menjembatani desain visual secara mulus ke dalam aplikasi dunia nyata menggunakan teknologi modern seperti React dan Next.js.
             </p>
             <div 
               className="w-16 h-1 mx-auto mt-4 rounded-full"
@@ -29,14 +29,9 @@ export default function About() {
           
           {/* CARD 1 — PENDIDIKAN */}
           <ScrollReveal delay={0.1} direction="left">
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
-              <div className="flex items-center gap-3 mb-6">
-                <div 
-                  className="w-12 h-12 rounded-xl flex items-center justify-center"
-                  style={{ background: "#e6f3ff" }}
-                >
-                  <GraduationCap size={24} style={{ color: "#003366" }} />
-                </div>
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
+                <GraduationCap size={28} style={{ color: "#003366" }} />
                 <h3 className="text-xl font-bold text-gray-900">Pendidikan</h3>
               </div>
               
@@ -70,25 +65,17 @@ export default function About() {
 
           {/* CARD 2 — KEAHLIAN UTAMA */}
           <ScrollReveal delay={0.2} direction="right">
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
-              <div className="flex items-center gap-3 mb-6">
-                <div 
-                  className="w-12 h-12 rounded-xl flex items-center justify-center"
-                  style={{ background: "#e6f3ff" }}
-                >
-                  <Sparkles size={24} style={{ color: "#003366" }} />
-                </div>
+            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
+                <Sparkles size={28} style={{ color: "#003366" }} />
                 <h3 className="text-xl font-bold text-gray-900">Keahlian Utama</h3>
               </div>
               
               <div className="flex flex-col gap-5">
                 {/* Item 1 */}
                 <div className="flex items-start gap-4">
-                  <div 
-                    className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ background: "#e6f3ff" }}
-                  >
-                    🎨
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "#e6f3ff" }}>
+                    <Palette size={20} style={{ color: "#003366" }} />
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">UI/UX Designer</p>
@@ -98,11 +85,8 @@ export default function About() {
 
                 {/* Item 2 */}
                 <div className="flex items-start gap-4">
-                  <div 
-                    className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ background: "#e6f3ff" }}
-                  >
-                    💻
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "#e6f3ff" }}>
+                    <Code size={20} style={{ color: "#003366" }} />
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Front-end Developer</p>
@@ -112,11 +96,8 @@ export default function About() {
 
                 {/* Item 3 */}
                 <div className="flex items-start gap-4">
-                  <div 
-                    className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                    style={{ background: "#e6f3ff" }}
-                  >
-                    ✏️
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style={{ background: "#e6f3ff" }}>
+                    <Pen size={20} style={{ color: "#003366" }} />
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">Logo Designer</p>
@@ -133,13 +114,14 @@ export default function About() {
         <ScrollReveal delay={0.3}>
           <div className="flex justify-center">
             <a 
-              href="#" 
+              href="/CV.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-3 rounded-full font-semibold border-2 transition-all duration-300 hover:bg-blue-50"
               style={{ color: "#003366", borderColor: "#003366" }}
             >
-              📄 Buka CV (PDF)
+              <FileText size={20} />
+              Buka CV (PDF)
             </a>
           </div>
         </ScrollReveal>

@@ -17,14 +17,14 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-gray-500 text-lg font-medium"
             >
-              Halo! Selamat Datang
+              Professional Portfolio
             </motion.p>
             
             <motion.h1 
               initial={{ opacity: 0, y: 20 }} 
               animate={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight"
+              className="text-6xl md:text-7xl font-bold text-gray-900 leading-tight"
             >
               <span style={{
                 background: "linear-gradient(135deg, #003366, #0066cc)",
@@ -32,20 +32,20 @@ export default function Hero() {
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text"
               }}>
-                Portfolio
+                Amir
               </span>
               <br />
-              Amir Hamzah
+              Hamzah
             </motion.h1>
             
             <motion.p 
               initial={{ opacity: 0, y: 20 }} 
               animate={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-gray-600 text-lg leading-relaxed max-w-lg"
+              className="text-gray-600 font-bold text-lg leading-relaxed max-w-lg"
             >
-              Mahasiswa aktif Politeknik Negeri Jakarta dengan minat besar pada UI/UX Design. Saya senang menciptakan antarmuka yang menarik, fungsional, dan humanis.
-            </motion.p>
+              Front-End Developer & <br/> UI/UX Designer
+              </motion.p>
             
             <motion.div 
               initial={{ opacity: 0, y: 20 }} 
@@ -80,25 +80,25 @@ export default function Hero() {
             >
               {/* EFEK GLOW/PULSE */}
               <div 
-                className="absolute rounded-full animate-pulse" 
-                style={{ width: "320px", height: "320px", background: "rgba(0, 51, 102, 0.08)" }}
+                className="absolute rounded-full animate-pulse blur-3xl" 
+                style={{ width: "420px", height: "420px", background: "rgba(0, 51, 102, 0.15)" }}
               ></div>
               <div 
-                className="absolute rounded-full animate-pulse" 
-                style={{ width: "280px", height: "280px", background: "rgba(0, 51, 102, 0.12)", animationDelay: "0.5s" }}
+                className="absolute rounded-full animate-pulse blur-2xl" 
+                style={{ width: "360px", height: "360px", background: "rgba(0, 51, 102, 0.2)", animationDelay: "0.5s" }}
               ></div>
               
               {/* FOTO PROFIL */}
               <div className="relative z-10">
                 <div 
                   className="rounded-full overflow-hidden border-4"
-                  style={{ borderColor: "#003366", width: "240px", height: "240px" }}
+                  style={{ borderColor: "#003366", width: "320px", height: "320px" }}
                 >
                   <Image 
-                    src="/images/profile.jpg" 
+                    src="/images/amir.jpeg" 
                     alt="Amir Hamzah" 
-                    width={240} 
-                    height={240} 
+                    width={320} 
+                    height={320} 
                     className="object-cover w-full h-full"
                     priority={true} 
                   />
